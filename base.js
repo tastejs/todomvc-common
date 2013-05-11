@@ -6,7 +6,7 @@
 	}
 
 	function getSourcePath() {
-		// If accessed via addyosmani.github.io/todomvc/, strip the project path.
+		// If accessed via tastejs.github.io/todomvc/, strip the project path.
 		if (location.hostname.indexOf('github.io') > 0) {
 			return location.pathname.replace(/todomvc\//, '');
 		}
