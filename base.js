@@ -177,7 +177,7 @@
 		}
 
 		if (!framework && document.querySelector('[data-framework]')) {
-			framework = document.querySelector('[data-framework]').getAttribute('data-framework');
+			framework = document.querySelector('[data-framework]').dataset.framework;
 		}
 
 
