@@ -1,8 +1,8 @@
 # todomvc-common
 
-> Bower component for some common utilities we use in every app
+> Bower component with some common utilities we use in every app
 
 
 ## License
 
-MIT
+MIT © [TasteJS](http://tastejs.com)
