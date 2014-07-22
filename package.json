@@ -1,0 +1,17 @@
+{
+  "name": "todomvc-common",
+  "version": "0.1.9",
+  "keywords": ["todomvc", "common", "tastejs"],
+  "description": "Common utilities used in every TodoMVC application.",
+  "main": "base.js",
+  "private": false,
+  "preferGlobal": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tastejs/todomvc-common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tastejs/todomvc-common/issues"
+  },
+  "licenses": ["MIT"]
+}
