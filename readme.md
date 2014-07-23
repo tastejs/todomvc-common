@@ -1,6 +1,6 @@
 # todomvc-common
 
-> Bower component with some common utilities we use in every app
+> Common TodoMVC utilities used by our apps
 
 
 ## License
