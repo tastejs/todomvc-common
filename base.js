@@ -1,6 +1,8 @@
+/* global _ */
 (function () {
 	'use strict';
 
+	/* jshint ignore:start */
 	// Underscore's Template Module
 	// Courtesy of underscorejs.org
 	var _ = (function (_) {
@@ -114,6 +116,7 @@
 	if (location.hostname === 'todomvc.com') {
 		window._gaq = [['_setAccount','UA-31081062-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
 	}
+	/* jshint ignore:end */
 
 	function fetchIssueCount() {
 		var issueLink = document.getElementById('issue-count-link');
@@ -121,7 +124,7 @@
 		var url = issueLink.href.replace(/https:\/\/github\.com/, 'https://api.github.com/repos');
 		var xhr = new XMLHttpRequest();
 		xhr.open('GET', url, true);
-		xhr.onload = function(e) {
+		xhr.onload = function (e) {
 			var count = JSON.parse(e.target.responseText).length;
 			if (count === 0) {
 				issueLink.style.display = 'none';
@@ -129,7 +132,7 @@
 			} else {
 				issueLink.innerHTML = issueLink.innerHTML.replace(/open issues/, 'has (' + count + ') open issues');
 			}
-		}
+		};
 		xhr.send();
 	}
 
