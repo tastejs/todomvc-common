@@ -202,18 +202,19 @@
 
 	Learn.prototype.fetchIssueCount = function () {
 		var issueLink = document.getElementById('issue-count-link');
-
-		var url = issueLink.href.replace(/https:\/\/github\.com/, 'https://api.github.com/repos');
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', url, true);
-		xhr.onload = function (e) {
-			var count = JSON.parse(e.target.responseText).length;
-			if (count !== 0) {
-				issueLink.innerHTML = issueLink.innerHTML.replace(/open issues/, 'has (' + count + ') open issues');
-				document.getElementById('issue-count').style.display = 'inline';
-			}
-		};
-		xhr.send();
+		if (issueLink) {
+			var url = issueLink.href.replace(/https:\/\/github\.com/, 'https://api.github.com/repos');
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', url, true);
+			xhr.onload = function (e) {
+				var count = JSON.parse(e.target.responseText).length;
+				if (count !== 0) {
+					issueLink.innerHTML = issueLink.innerHTML.replace(/open issues/, 'has (' + count + ') open issues');
+					document.getElementById('issue-count').style.display = 'inline';
+				}
+			};
+			xhr.send();
+		}
 	};
 
 	redirect();
