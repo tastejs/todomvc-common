@@ -178,11 +178,13 @@
 
 		if (learnJSON.backend) {
 			this.frameworkJSON = learnJSON.backend;
+			this.frameworkJSON.issueLabel = framework;
 			this.append({
 				backend: true
 			});
 		} else if (learnJSON[framework]) {
 			this.frameworkJSON = learnJSON[framework];
+			this.frameworkJSON.issueLabel = framework;
 			this.append();
 		}
 
@@ -220,7 +222,7 @@
 	Learn.prototype.fetchIssueCount = function () {
 		var issueLink = document.getElementById('issue-count-link');
 		if (issueLink) {
-			var url = issueLink.href.replace(/https:\/\/github\.com/, 'https://api.github.com/repos');
+			var url = issueLink.href.replace('https://github.com', 'https://api.github.com/repos');
 			var xhr = new XMLHttpRequest();
 			xhr.open('GET', url, true);
 			xhr.onload = function (e) {
