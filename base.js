@@ -226,10 +226,13 @@
 			var xhr = new XMLHttpRequest();
 			xhr.open('GET', url, true);
 			xhr.onload = function (e) {
-				var count = JSON.parse(e.target.responseText).length;
-				if (count !== 0) {
-					issueLink.innerHTML = issueLink.innerHTML.replace(/open issues/, 'has (' + count + ') open issues');
-					document.getElementById('issue-count').style.display = 'inline';
+				var parsedResponse = JSON.parse(e.target.responseText);
+				if (parsedResponse instanceof Array) {
+					var count = parsedResponse.length
+					if (count !== 0) {
+						issueLink.innerHTML = issueLink.innerHTML.replace(/open issues/, 'has (' + count + ') open issues');
+						document.getElementById('issue-count').style.display = 'inline';
+					}
 				}
 			};
 			xhr.send();
