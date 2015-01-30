@@ -1,6 +1,6 @@
 {
   "name": "todomvc-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common TodoMVC utilities used by our apps",
   "license": "MIT",
   "repository": "tastejs/todomvc-common",
