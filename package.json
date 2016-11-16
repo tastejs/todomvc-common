@@ -6,6 +6,7 @@
   "repository": "tastejs/todomvc-common",
   "author": "TasteJS",
   "main": "base.js",
+  "style": "base.css",
   "files": [
     "base.js",
     "base.css"
