@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save todomvc-common
+$ npm install todomvc-common
 ```
 
 
