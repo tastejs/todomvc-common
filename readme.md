@@ -10,6 +10,6 @@ $ npm install todomvc-common
 ```
 
 
-## License
+## License?
 
 MIT © [TasteJS](http://tastejs.com)
